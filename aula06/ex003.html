@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body{
+            background-color: rgb(145, 145, 240);
+            color:white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        var n1 = Number(window.prompt("Digite um número")); 
+    /*  - prompt recebe valor string, será necessário converter 
+        ! Para converter, as opções são:
+        - Para números inteiros: Number.parseInt(n)
+        var n1 = Number.parseInt(window.prompt("Digite um número")); 
+        - Para números em pontos flutuantes: Number.parsefloat(n)
+        var n1 = Number.parsefloat(window.prompt("Digite um número"))
+        - a opção Number(n) é uma sintaxe atualizada, que identifica automáticamente
+        var n1 = Number.parseInt(window.prompt("Digite um número"))
+        ! Formatando números:
+        - n.toFixed(qtd) n é a variável e qtd é a quantidade de casas decimais fixas desejadas
+        - n.toFixed(2).replace(".", ',') troca o ponto que separa o número das casas decimais para virgula
+        ! Também é possível converter número para string, das seguintes formas (Suponhamos que o número seja s):
+        - String(n)
+        window.alert("A soma dos valores é: " + String(s))
+        - n.toString()
+        window.alert("A soma dos valores é: " + s.toString())
+        ! Formatando Strings:
+        - s.lenght mostra quantos caracteres a string tem
+        - s.toUpperCase() muda todas as letras para "MAIÚSCULAS"
+        - s.toLowerCase() muda todas as letras para minúsculas
+        */
+        var n2 = Number(window.prompt("Digite outro número"));
+        var s = n1 + n2;
+        window.alert(`A soma entre ${n1} e ${n2} é: ${s}`)
+     /* - + serve para adição e concatenação
+        window.alert("A soma dos valores é: " + s)
+        - para textos com várias concatenações, pode-se usar template string da maneira abaixo:
+        window.alert(`A soma dos valores é: ${s}`) o ${s} é um place holder, o template é feito entre crases (``) */
+    </script>
+</body>
+</html>
