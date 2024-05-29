@@ -31,6 +31,10 @@
         ! Formatando números:
         - n.toFixed(qtd) n é a variável e qtd é a quantidade de casas decimais fixas desejadas
         - n.toFixed(2).replace(".", ',') troca o ponto que separa o número das casas decimais para virgula
+        - n.toLocaleString('lang', {style: 'type', type: 'placement'}) lang é a linguagem/país a ser localizado, type,
+    que é o tipo (Exemplo: "currency" que é dinheiro) e o placement é a definição do tipo, no exemplo anterior, segue
+    um exemplo: BRL, que é real.
+        - Código formatado: salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) -> Retorna em reais
         ! Também é possível converter número para string, das seguintes formas (Suponhamos que o número seja s):
         - String(n)
         window.alert("A soma dos valores é: " + String(s))
