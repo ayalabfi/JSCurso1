@@ -1,0 +1,67 @@
+<!-- Para comentar, faça dessa foram -->
+<!-- Todo o corpo do site, é feito via linguagem HTML, com exceção do estilo, que como citado -->
+<!-- Mais abaixo, é feito em linguagem CSS -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Head, significa cabeça, ou seja, a configuração do site -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <!-- Estilo Feito em CSS -->
+    <!-- background-color dita qual a cor de fundo do fundo do site -->
+    <!-- color dita qual será a cor da fonte, clicando no quadrado, você pode alternar a cor de sua preferência -->
+    <!-- font dita quais serão os parametros da fonte, seguindo por padrão tipo, tamanho e fonte -->
+    <style>
+  /* Estilo Feito em CSS 
+     background-color dita qual a cor de fundo do fundo do site 
+     color dita qual será a cor da fonte, clicando no quadrado, você pode alternar a cor de sua preferência 
+     font dita quais serão os parametros da fonte, seguindo por padrão tipo, tamanho e fonte */ 
+        body{
+            background-color: rgb(145, 145, 240);
+            color:white;
+            font: normal 20pt Arial;
+        }
+        /* Os comandos abaixo, geram design para o comando h1 */
+        h1 {
+            color:aquamarine;
+        }
+    </style>
+    <!-- Finaliza aqui -->
+</head>
+<!-- body, significa corpo, ou seja, tudo que é visível ao usuário -->
+<body>
+    <h1>Hello world!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+// Para comentar em javaScript  (Essa para linha única)
+/* Basta utilizar essas 2 formas (Essa para multiplas linhas) */
+/* Parte de interatividade, feita em JavaScript
+   window.alert, ou apenas alert, gera um alerta na tela
+   window.confirm gera uma mensagem com pedido de confirmação ao usuário
+   window.prompt gera uma mensagem com uma caixa de texto abaixo para preenchimento pelo cliente 
+   Os identificadores tem as seguintes exceções:
+   - Podem começar com letra, $ ou _
+   - Não podem começar com números
+   - É possível usar letras ou números
+   - É possível usar acentos ou símbolos
+   - Não podem conter espaços
+   - Não podem ser palavras reservadas (ex: var, string, alert, confirm...
+   Dicas:
+   - Letras maiúsculas e minúsculas fazem diferença, não são a mesma variável 
+   (preferível utilizar cammelCase em nomes compostos)
+   - Utilize nomes coerentes para as variáveis
+   - Evite se tornar um programador alfabeto ou contador "Utilizar apenas letras ou números para nomes de variável"
+   - Grande parte dos números, sejam eles inteiros ou de pontos flutuantes, em JS são chamados de number
+   * Suas sub classes são Infinity e NaN 
+   - Grande parte das cadeias de caractéres, são chamadas de string
+   - Grande parte das cadeias de verdadeiro ou falso (true/false) são chamadas de boolean
+   - typeof mostra qual o tipo da variavel (Node.js)
+   )
+   */
+        window.alert('Minha primeira mensagem!');
+        window.confirm('Está gostando de JS?');
+        window.prompt('Qual é seu nome?');
+    </script>
+</body>
+</html>
