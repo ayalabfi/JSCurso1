@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(8, 52, 148);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+    <script>
+        // DOM - Document Object Model, ou modelo de objetos para documentos (Não funciona dentro do Node.js)
+        /* Dentro da arvore DOM, quem está diretamente acima é nomeado como parent, e quem está diretamente abaixo, é chamado de child
+        ! A arvore DOM começa a partir da Raiz (window), que possui as seguintes ramificações:
+        - location: Qual a localização do seu site, qual é a página atual, qual foi a página anterior...
+        - document: O documento atual
+        - history: Guarda o histórico
+
+        Dentro do document, tem a seguinte ramificação:
+        - html: A parte html do site
+        
+        Dentro de html, há 2 ramificações:
+        - head
+        - body
+
+        Dentro de head, há 2 ramificações:
+        - meta
+        - title
+
+        Dentro de body, há 4 ramificações:
+        - h1
+        - p
+        - p
+        - div
+
+        Dentro do 2º p, há 1 ramificação:
+        - strong
+
+        Essa é a Árvore DOM desse arquivo.
+        - A partir dessa arvore, é possível fazer navegações usando os elementos, como por exemplo, a descrita abaixo
+        */
+       // window.document.write(window.document.URL); Mostra a URL do site atual, puxando a partir de uma ramificação
+       /* Pode-se utilizar vários métodos para acessar os elementos da árvore DOM, dentre eles estão:
+       ! Marca Ex.: getElementsByTagName() -> Pode-se utilizar mais de 1 elemento */
+       var p1 = window.document.getElementsByTagName("p")[1];
+       /* Explicando o código acima:
+       - getElements está no plural, tendo isso em vista, ele puxará todos os elementos presentes.
+       - ByTagName quer dizer que ele puxará de acordo com a Tag, nesses casos, foi utilizado a Tag <p>
+       - ("Aqui é declarado a Tag")[Aqui é posto qual a tag a ser apresentada, a contagem se inicia em 0]
+       */
+       window.document.write("Está escrito assim: " + p1.innerText)
+       /* Explicando o código acima:
+       - window.document.write busca fazer a escrita do que vem a frente
+       - ("Texto livre, poderia escrever oque quisesse" variável criada com a tag (p1).innerText(O texto que está dentro da variável))
+       */
+       var corpo = window.document.body
+       // Agora a variável Corpo está diretamente ligada ao body
+
+       document.write(p1.innerHTML);
+       // innerHTML puxa toda a formatação junto
+       /* 
+       ! ID Ex.: getElementById()
+       - Nesse método, é necessário declarar o ID ao que deseja ser declarado, um exemplo é: <div id="msg"> O id dessa div é msg</div>
+       - para atribuir a uma variável esse ID, basta utilizar por exemplo: var d = window.document.getElementById("msg")
+       ! Nome Ex.: getElementsByName()
+       - Esse método é similar ao anterior, sendo necessário declarar o nome, como por exemplo: <div name="msg">O nome dessa div é msg</div>
+       - Como o Elements nessa declaração é no plural, é necessário declarar qual a ordem, se iniciando em 0, assim como na Marca. 
+       ! Classe Ex.: getElementsByClassName()
+       - Utiliza o mesmo principio do anterior
+       ! Seletor (CSS) Ex.: querySelector() ou querySelectorAll()
+       - var d = window.document.querySelector("div#msg(# quando for ID e . quando for class)")
+       /*
+    </script>
+</body>
+</html>
