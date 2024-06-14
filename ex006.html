@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+     /* ! Referencias de evento de DOM no link abaixo.
+        https://developer.mozilla.org/en-US/docs/Web/Events 
+        
+        ! Funções:
+        - Um conjunto de códigos executados apenas diante da ocorrência de um evento
+        - O conjunto de códigos da função é chamado de bloco
+        - um bloco em JS é delimitado por function ação (parameters){}
+        - Renomear ação pela ação a ser tomada
+
+        ! Eventos
+        - Podem ocorrer dentro do HTML ou diretamente no JS
+        */
+        div#area{
+            font: normal 20pt Arial;
+            background: rgb(46, 241, 121);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Assim são declarados os eventos pelo HTML
+        <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout ="sair()">-->
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+
+        var area = window.document.getElementById("area");
+        // Assim são declarados os eventos pelo JS
+        area.addEventListener("click", clicar);
+        area.addEventListener("mouseenter", entrar);
+        area.addEventListener("mouseout", sair);
+        
+        function clicar(){
+            area.innerText = "Clicou!"
+            area.style.background = "red";
+        }
+        function entrar(){
+            area.innerText = "Entrou!"
+        }
+        function sair(){
+            area.innerText = "Saiu!"
+            area.style.background = "rgb(46, 241, 121)";
+        }
+    </script>
+</body>
+</html>
