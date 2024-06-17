@@ -1,0 +1,31 @@
+<!-- Código dando erro, refazer! -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual sua nacionalidade?</title>
+</head>
+<body>
+    <h1> Avaliador de nacionalidade</h1>
+    Digite a frente o seu país:
+    <input type="text" name="location" id="location">
+    <input type="button" value="Validar" onclick="verify()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verify() {
+        var country = window.document.querySelector("input#location")
+        console.log(country)
+        var res = window.document.querySelector("div#res")
+        res.innerHTML = "O país é" + country
+            if (country == "brasil"){
+                res.innerHTML += `No país ${country} você é Brasileiro`
+            } else {
+                res.innerHTML += `No país ${country} você é Estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
