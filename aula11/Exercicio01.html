@@ -1,4 +1,4 @@
-<!-- Código dando erro, refazer!! -->
+<!--Exercicio referente a aula 10-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,11 +16,11 @@
     </div>
     <script>
         function verify() {
-        var country = window.document.querySelector("input#location")
+        var country = window.document.querySelector("input#location").value
         console.log(country)
         var res = window.document.querySelector("div#res")
-        res.innerHTML = "O país é" + country
-            if (country == "brasil"){
+        res.innerHTML = `<br>O país é ${country}<br><br>`
+            if (country == "Brasil"){
                 res.innerHTML += `No país ${country} você é Brasileiro`
             } else {
                 res.innerHTML += `No país ${country} você é Estrangeiro`
