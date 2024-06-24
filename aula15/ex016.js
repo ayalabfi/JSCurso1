@@ -46,4 +46,4 @@ console.log(`Os valores do vetor em ordem são: ${num.sort()}`)
 se não tiver, ele retorna -1, devido a não se encontrar no indice
 se tiver, ele retorna qual o indice do elemento a qual o valor pertence
 */
-console.log (num.indexOf(7))
+console.log (num.indexOf(7)) 

@@ -15,4 +15,4 @@ na leitura ao pé da letra, quer dizer, para cada position dentro de num
 */
 for (let position in num) {
 console.log(`A posição ${position} agora tem o valor ${num[position]}`)    
-}
+} 
