@@ -1,0 +1,15 @@
+Após o fim do curso, oque estudar?
+1 - Curso de HTML (Curso em vídeo possui)
+2 - Curso de CSS (Curso em vídeo possui)
+3 - Functions
+* arrow functions
+* callbacks
+* funções anonimas
+* iife
+* javaScript funcional
+3 - Objetos -> Curso de orientação a objetos (Curso em video possui, no entanto, é em Java)
+4 - modularização -> Deixar o código separado em arquivos e reutilizar códigos com JS
+5 - RegEx -> Expressões regulares
+6 - JSON -> estrutura de objetos onde você pode transmitir e salvar dados de forma local
+7 - AJAX
+8 - NodeJS
