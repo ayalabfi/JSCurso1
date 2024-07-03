@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: aquamarine;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contando números</h1>
+    <h2>Inicio <input type="number" name="inicio" id="inicio"></p>
+        Fim <input type="number" name="fim" id="fim"></p>
+        Passo <input type="number" name="passo" id="passo"></p>
+        <input type="button" value="Validar" onclick="valida()">
+    </h2>
+    <div id="res">
+
+    </div>
+    <script>
+        function valida() {
+            var ini = parseInt(document.querySelector("input#inicio").value)
+            var final = parseInt(document.querySelector("input#fim").value)
+            var pula = parseInt(document.querySelector("input#passo").value)
+            var res = document.querySelector("#res")
+            if (isNaN(ini) || isNaN(final)) {
+                res.innerHTML = (`Impossível calcular, confirme se preencheu todos os campos`)
+            } else if (pula <= 0 || isNaN(pula)) {
+                window.alert(`O valor de Passo é 0, menor ou nulo, atribuído o valor 1`)
+                pula = 1
+                contar = ini
+                res.innerHTML = (`${contar}`)
+                while (contar < final) {
+                    contar = contar + pula;
+                    res.innerHTML += (` 👉 ${contar}`)
+                }
+                res.innerHTML += (` 🚫 `)
+            } else if (final < ini) {
+                res.innerHTML = (`O valor inicial ${ini} é maior que o final ${final}`)
+            } else {
+                contar = ini
+                res.innerHTML = (`${contar}`)
+                while (contar < final) {
+                    contar += pula;
+                    if (contar <= final) {
+                        res.innerHTML += (` 👉 ${contar}`)
+                    } else { }
+                }
+                res.innerHTML += (` 🚫 `)
+            }
+        }
+    </script>
+</body>
+
+</html>
