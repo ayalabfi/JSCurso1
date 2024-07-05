@@ -34,26 +34,48 @@
             var pula = parseInt(document.querySelector("input#passo").value)
             var res = document.querySelector("#res")
             if (isNaN(ini) || isNaN(final)) {
-                res.innerHTML = (`Impossível calcular, confirme se preencheu todos os campos`)
-            } else if (pula <= 0 || isNaN(pula)) {
-                window.alert(`O valor de Passo é 0, menor ou nulo, atribuído o valor 1`)
+                res.innerHTML = (`O valor de Inicio ou Fim não foi informado`)
+            } else if (ini > final && isNaN(pula) || pula == 0) {
+                window.alert(`O valor de pula é 0 ou nulo, atribuido valor 1`)
                 pula = 1
-                contar = ini
-                res.innerHTML = (`${contar}`)
-                while (contar < final) {
-                    contar = contar + pula;
-                    res.innerHTML += (` 👉 ${contar}`)
+                start = ini
+                res.innerHTML = (`${start}`)
+                while (start > final) {
+                    start -= pula
+                    if (start >= final) {
+                        res.innerHTML += (` 👉 ${start}`)
+                    } else { }
                 }
                 res.innerHTML += (` 🚫 `)
-            } else if (final < ini) {
-                res.innerHTML = (`O valor inicial ${ini} é maior que o final ${final}`)
+            } else if (ini < final && isNaN(pula) || pula == 0) {
+                window.alert(`O valor de pula é 0 ou nulo, atribuido valor 1`)
+                pula = 1
+                start = ini
+                res.innerHTML = (`${start}`)
+                while (start < final) {
+                    start += pula
+                    if (start <= final) {
+                        res.innerHTML += (` 👉 ${start}`)
+                    } else { }
+                }
+                res.innerHTML += (` 🚫 `)
+            } else if (ini < final) {
+                start = ini
+                res.innerHTML = (`${ini}`)
+                while (start < final) {
+                    start += pula
+                    if (start <= final) {
+                        res.innerHTML += (` 👉 ${start}`)
+                    } else { }
+                }
+                res.innerHTML += (` 🚫 `)
             } else {
-                contar = ini
-                res.innerHTML = (`${contar}`)
-                while (contar < final) {
-                    contar += pula;
-                    if (contar <= final) {
-                        res.innerHTML += (` 👉 ${contar}`)
+                start = ini
+                res.innerHTML = (`${ini}`)
+                while (start > final) {
+                    start -= pula
+                    if (start >= final) {
+                        res.innerHTML += (` 👉 ${start}`)
                     } else { }
                 }
                 res.innerHTML += (` 🚫 `)
